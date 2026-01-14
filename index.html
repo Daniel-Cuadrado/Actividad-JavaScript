@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Presentación JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Práctica de JavaScript</h1>
+        </header>
+
+        <section id="explicaciones">
+            <article>
+                <h2>Diferencia entre let y var</h2>
+                <p>
+                    <strong>var:</strong> Tiene ámbito de función (o global si se declara fuera de una función). 
+                    Sufre de "hoisting" (elevación), lo que significa que se puede acceder a la variable antes de su declaración (undefined).
+                    Permite la redeclaración de la misma variable.
+                </p>
+                <p>
+                    <strong>let:</strong> Tiene ámbito de bloque (limitado a las llaves <code>{}</code> donde se define). 
+                    No sufre de hoisting de la misma manera (zona muerta temporal). 
+                    No permite redeclarar la variable en el mismo ámbito.
+                </p>
+            </article>
+
+            <article>
+                <h2>Impacto de ES2015 (ES6)</h2>
+                <p>
+                    ECMAScript 2015 (conocido como ES6) supuso el cambio más radical en JavaScript desde su creación. 
+                    Introdujo características modernas que hicieron el lenguaje más potente y limpio para desarrollar aplicaciones complejas.
+                </p>
+                <ul>
+                    <li><strong>Ámbito de bloque:</strong> Introducción de <code>let</code> y <code>const</code>.</li>
+                    <li><strong>Funciones Flecha (Arrow Functions):</strong> Sintaxis más concisa y manejo léxico de <code>this</code>.</li>
+                    <li><strong>Clases:</strong> Sintaxis más clara para la programación orientada a objetos (sugar syntax sobre prototipos).</li>
+                    <li><strong>Template Strings:</strong> Cadenas de texto con interpolación <code>`${variable}`</code>.</li>
+                    <li><strong>Desestructuración:</strong> Extraer valores de arrays u objetos fácilmente.</li>
+                    <li><strong>Módulos:</strong> <code>import</code> y <code>export</code> nativos.</li>
+                    <li><strong>Promesas:</strong> Manejo nativo de asincronía.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="zona-sonido">
+            <h2>Gestión de Eventos: Iframe de Sonido</h2>
+            <div class="controls">
+                <button id="btnMostrar">Mostrar Sonido</button>
+                <button id="btnOcultar">Ocultar Sonido</button>
+            </div>
+            
+            <div id="iframeContainer" class="hidden">
+                <!-- Iframe sin src inicial para evitar cargas bloqueadas -->
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="zona-formulario">
+            <h2>Validación de Formulario (blur)</h2>
+            <form id="miFormulario">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre aquí...">
+                    <small>Abre la consola del navegador (F12) para ver la validación al salir del campo.</small>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
